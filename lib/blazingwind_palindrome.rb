@@ -2,7 +2,17 @@
 
 require_relative "blazingwind_palindrome/version"
 
-module BlazingwindPalindrome
-  class Error < StandardError; end
-  # Your code goes here...
+class String
+
+  # Returns trye for a palidrome, false otherwise.
+  def palindrome?
+    processed_content == processed_content.reverse
+  end
+
+  private
+
+    def processed_content
+      self.downcase
+    end
 end
+
