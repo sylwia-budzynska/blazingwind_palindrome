@@ -17,7 +17,11 @@ class TestBlazingwindPalindrome < Minitest::Test
   end
 
   def test_palindrome_with_punctuation
-    skip
+    assert "Madam, I'm Adam.".palindrome?
   end
 
+  def test_letters
+    # assert_equal expected, actual
+    assert_equal "MadamImAdam", "Madam, I'm Adam.".letters
+  end
 end
