@@ -9,23 +9,26 @@ class String
     processed_content == processed_content.reverse
   end
 
-  # Returns the letters in the string.
-  def letters
+  # Returns the letters in the string. Used in processed_content
+  # def letters
+  #   self.scan(/[a-zA-Z]*/).join
+
     # the early version
-    the_letters = []
-    for i in 0..self.length - 1 do
-      if self[i].match(/[a-zA-Z]/)
-        the_letters << self[i]
-      end
-    end
-    the_letters.join
+    # the_letters = []
+    # for i in 0..self.length - 1 do
+    #   if self[i].match(/[a-zA-Z]/)
+    #     the_letters << self[i]
+    #   end
+    # end
+    # the_letters.join
+
     # other option
-    # self.scan(/[a-zA-Z]*/).join
-  end
+    # chars.select { |c| c.match(/[a-z]/i) }.join
+  # end
 
   private
 
     def processed_content
-      self.letters.downcase
+      self.scan(/[a-zA-Z]*/).join.downcase
     end
 end
