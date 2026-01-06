@@ -2,9 +2,8 @@
 
 require_relative "blazingwind_palindrome/version"
 
-class String
-
-  # Returns trye for a palidrome, false otherwise.
+module BlazingwindPalindrome
+  # Returns true for a palidrome, false otherwise.
   def palindrome?
     processed_content == processed_content.reverse
   end
@@ -29,6 +28,15 @@ class String
   private
 
     def processed_content
-      self.scan(/[a-zA-Z]*/).join.downcase
+      self.to_s.scan(/[a-z\d]/i).join.downcase
     end
+end
+
+
+class String
+  include BlazingwindPalindrome
+end
+
+class Integer
+  include BlazingwindPalindrome
 end
