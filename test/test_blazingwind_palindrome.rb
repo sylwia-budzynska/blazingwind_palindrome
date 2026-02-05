@@ -28,4 +28,7 @@ class TestBlazingwindPalindrome < Minitest::Test
     refute 12323.palindrome?
   end
 
+  def test_spaces_non_palindrome
+    refute "    ".palindrome?
+  end
 end
