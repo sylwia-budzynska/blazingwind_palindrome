@@ -5,6 +5,9 @@ require_relative "blazingwind_palindrome/version"
 module BlazingwindPalindrome
   # Returns true for a palidrome, false otherwise.
   def palindrome?
+    if processed_content.empty?
+      return false
+    end
     processed_content == processed_content.reverse
   end
 
