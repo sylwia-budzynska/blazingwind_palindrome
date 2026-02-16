@@ -2,6 +2,8 @@
 
 `blazingwind_palindrome` is a sample Ruby gem created in [*Learn Enough Ruby to Be Dangerous*](https://www.learnenough.com/ruby-tutorial) by Michael Hartl.
 
+test test
+
 ## Installation
 
 To install `blazingwind_palindrome`, add this line to your application's `Gemfile`:
